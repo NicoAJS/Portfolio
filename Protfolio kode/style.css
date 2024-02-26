@@ -1,0 +1,677 @@
+/*************** GENERAL ***************/
+@import url('https://fonts.cdnfonts.com/css/false');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #FAFAFA;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+h6, p {
+    font-family: "Raleway", sans-serif;
+}
+
+/*************** HEADER ****************/
+
+.navBar {
+    background-color: #9EAB9D;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.5s ease; 
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #FCE3E6; 
+    transition: text-decoration 0.5s ease, color 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        flex-direction: column; 
+    }
+
+    .links a {
+        padding: 10px 0; 
+    }
+
+    .links img {
+        max-width: 80px; 
+        margin-bottom: 10px; 
+    }
+}
+
+
+
+/**************** MAIN ****************/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#velkomst {
+    width: 100%;
+    background-color: aqua;
+    height: 820px;
+    background-image: url(billeder/Portfolio\ velkomst.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0; 
+    animation: fadeIn 2s ease-in-out forwards; 
+
+    @media screen and (max-width: 768px) {
+        height: auto; 
+    }
+}
+
+/********* BUTTONS ***********/
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 2%;
+    margin: 4% auto;
+    font-size: 15pt;
+    background-color: #FCE3E6;
+    border: #3E4F3D solid 2px;
+    color: #3E4F3D;
+    text-decoration: none;
+    transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s;
+}
+
+.btn:hover {
+    background-color: #3E4F3D;
+    border-color: #FCE3E6;
+    color: #FCE3E6;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+
+/******** NICO INFO *********/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nicolineInfo {
+    max-width: 75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    opacity: 0; 
+    animation: fadeIn 2s ease-in-out forwards; 
+}
+
+.nicolineInfo h1 {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.nicolineInfo div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nicolineInfo section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.nicolineInfo p {
+    line-height: 20pt;
+}
+
+.nicolineInfo img {
+    max-height: 400px;
+    width: auto; 
+    max-width: 100%; 
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 768px) {
+    .nicolineInfo {
+        max-width: 90%; 
+        padding-bottom: 20px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .nicolineInfo img {
+        max-height: 300px; 
+    }
+
+    .nicolineInfo > * {
+        margin-bottom: 20px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nicolineInfo div {
+        flex-direction: column-reverse; 
+    }
+}
+
+
+/********** SKILLS **********/
+
+.skills {    
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 75%;
+}
+
+.skills h1 {
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.skills h2 {
+    margin-top: 2%;
+}
+
+.skills img {
+    height: 90px;
+}
+
+#hardSkills,
+.softSkills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+    padding: 2% 0;
+}
+
+.softSkills img {
+    margin-right: 10px; 
+}
+
+.softSkills h6 {
+    font-size: 13pt;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 20pt;
+}
+
+
+@media screen and (max-width: 768px) {
+    .skills {
+        max-width: 90%; 
+    }
+
+    #hardSkills,
+    .softSkills {
+        flex-direction: column; 
+        width: 90%; 
+    }
+
+    #hardSkills img,
+    .softSkills img {
+        margin: 0 0 10px 0; 
+    }
+}
+
+
+
+/************** ANBEFALING *****************/
+
+#anbefaling {
+    width: 75%;
+    margin: 0 auto; 
+}
+
+#anbefaling h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 9%;
+    padding-bottom: 2%;
+}
+
+.allCards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.card {
+    background-color: #FCE3E6;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 900px;
+    padding-bottom: 3%;
+}
+
+.card h4, .card h5 {
+    text-align: center;
+}
+
+.card p {
+    width: 90%; 
+    line-height: 20pt;
+    text-align: center; 
+    height: 450px;
+}
+
+.card img {
+    width: 200px; 
+    height: 200px; 
+    border: solid #9EAB9D 4px;
+}
+
+.container {
+    height: fit-content;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .allCards {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .card {
+        width: 90%; 
+        max-width: none; 
+        margin: 10px 0; 
+    }
+
+    .card p {
+        height: 90%;
+    }
+
+    .card img {
+        max-height: 150px; 
+    }
+}
+
+
+
+/****************** FOOTER *********************/
+#footer {
+    width: 100%;
+    height: 80%;
+    background-color: #9EAB9D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+}
+
+#footer h4 {
+    margin-bottom: 6%;
+}
+
+#stLogo {
+    width: 12%;
+    margin-bottom: 10px; 
+}
+
+.kontaktInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.some {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 10px; 
+}
+
+.some img {
+    width: 40%;
+    margin-bottom: 10px; 
+}
+
+#copyR {
+    margin-top: 20px;
+    color: #FCE3E6;
+}
+
+@media screen and (max-width: 768px) {
+    #footer {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    #stLogo {
+        width: 20%; 
+        margin-bottom: 10px; 
+    }
+
+    .kontaktInfo {
+        margin-bottom: 10px; 
+    }
+
+    .some {
+        margin-top: 10px; 
+    }
+
+    .some img {
+        width: 60%; 
+        margin-bottom: 10px; 
+    }
+}
+
+
+/******************* KONTAKT ***********************/
+
+#kontaktBG {
+    background-color: #FCE3E6;
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+}
+
+#kontaktMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FCE3E6;
+    width: 50%;
+    border: solid #3E4F3D 2px;
+    padding: 5%;
+}
+
+#kontaktMain p {
+    width: 80%;
+    text-align: center;
+    margin: 4% 0;
+    line-height: 25pt;
+}
+
+#kontaktMain td {
+    padding: 3% 0;
+}
+
+#kontaktMain img {
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    #kontaktMain {
+        width: 90%; 
+        max-width: 500px; 
+    }
+
+    #kontaktMain p {
+        width: 100%; 
+    }
+
+    #kontaktMain img {
+        width: 80%; 
+    }
+}
+
+
+/****************** WEB *********************/
+
+#webTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3% 0;
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+#webTop h1 {
+    text-align: center;
+    margin: 2% auto;
+}
+
+#webTop p {
+    width: 50%;
+    text-align: center;
+    line-height: 30pt;
+    margin-top: 2%;
+}
+
+.webBox {
+    background-color: #3E4F3D;
+    color: white;
+    width: 75%;
+    height: 800px;
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.indhold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.indhold h2 {
+    margin-left: 5%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.indhold p {
+    width: 70%;
+    margin-left: 5%;
+    line-height: 25pt;
+}
+
+.besøg {
+    margin-left: 33%;
+    margin-top: 60%;
+    background-color: #FCE3E6;
+    color: #3E4F3D;
+    border: solid #9EAB9D 3px;
+    height: 150%;
+    width: 150%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20pt;
+    font-weight: 400;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s, box-shadow 0.3s;
+}
+
+.besøg:hover {
+    background-color: #3E4F3D;
+    border-color: #FCE3E6;
+    color: #FCE3E6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.billederWeb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3%;
+    width: 100%;
+    margin-right: 5%;
+}
+
+.stBillede {
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: 8%;
+}
+
+.liBilleder img {
+    width: 80px;
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .webBox {
+        flex-direction: column; 
+        height: auto; 
+        padding: 5%;
+    }
+
+    .indhold {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .besøg {
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .billederWeb {
+        flex-direction: column; 
+        margin-top: 20px; 
+    }
+
+    .stBillede {
+        max-width: 200px; 
+        max-height: 200px; 
+        margin-bottom: 20px; 
+    }
+
+    .liBilleder img {
+        width: 80px; 
+        height: 100px; 
+        margin-top: 20px; 
+    }
+}
+
+
+/***************** ADOBE ********************/
+#adobeMain {
+    margin-bottom: 5%;
+}
+
+#adobeTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+#adobeTop h1 {
+    text-align: center;
+    margin: 2% auto;
+}
+
+#adobeTop p {
+    width: 50%;
+    text-align: center;
+    line-height: 30pt;
+}
+
+#adobeMain img {
+    height: 40%;
+    width: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#adobeMain img:hover {
+    transform: scale(1.2); /* Scale the image to 120% on hover */
+}
+
+#adobeMain h3{
+    margin-top: 150px;
+    font-size: 16pt;
+}
+
+@media screen and (max-width: 768px) {
+    #adobeTop p {
+        width: 90%;
+    }
+
+    #adobeMain img {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    #adobeMain h4 {
+        margin-top: 5%;
+    }
+}
